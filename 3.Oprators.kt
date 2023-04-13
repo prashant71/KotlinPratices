@@ -51,7 +51,4 @@ fun main(){
     c*=2
     println(c)
 
-
-
-
 }
