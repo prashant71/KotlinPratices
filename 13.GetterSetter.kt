@@ -1,8 +1,10 @@
+import java.util.*
+
 class Employee(nameParam : String, ageParam : Int){
     var name = nameParam
     get() {
         println("Getter is get called")
-        return "Mr.$field".toUpperCase()
+        return "Mr.$field".uppercase(Locale.getDefault())
     }
     var age = ageParam
     set(value) {
