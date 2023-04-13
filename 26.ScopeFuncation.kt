@@ -68,6 +68,4 @@ fun main(){
      *        2.The return value is lambda result
      *        3. Combination of with and let
      */
-
-    
 }

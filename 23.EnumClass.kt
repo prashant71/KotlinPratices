@@ -61,5 +61,6 @@ fun main(){
     println(DAYS.MONDAY.ordinal)
     println(DAYS.MONDAY.name)
 
+    //DAYS.values()
 
 }

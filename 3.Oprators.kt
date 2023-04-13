@@ -50,5 +50,4 @@ fun main(){
     println(b)
     c*=2
     println(c)
-
 }
