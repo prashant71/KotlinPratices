@@ -3,7 +3,7 @@
 fun main(){
     /**
      * For Loop -> this is useful when we know the number of iterations
-     * Ranges ->
+     * Ranges ->0...n
      * */
 
     println("For Loop -> Ranges(Included End Number)")
