@@ -32,7 +32,7 @@ fun main() {
     /** SAFE CALL '?.'
      * return value if variable is not null, and null otherwise.
      * Safe calls are useful in chains.
-     * Such a chain returns null if any of the properties in it is null.
+     * Such a chain returns null if any 1 of the properties in it is null.
      * */
     println(nullableInt?.toFloat())
     //bob?.department?.head?.name
