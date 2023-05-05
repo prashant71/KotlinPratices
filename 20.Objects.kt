@@ -23,7 +23,7 @@ object ObjectB : Parent1() {
     init {
         println("ObjectB init")
     }
-    override var name : String = ""
+//    override var name : String = ""
     fun getDetails() : String{
         return "Name is $name"
     }

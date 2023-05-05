@@ -36,7 +36,7 @@ class DemoClass{
 
  /**  fun as an expression */
 // fun sum(a : Int,b : Int,c : Int) : Int = a+b+c
- fun sum(a : Int,b : Int,c : Int) = a+b+c
+ fun sum(a : Int,b : Int,c : Int) = "Sum is : ${a+b+c}"
 
 
  /** The function which doesn't return any value  then we can mention return type is Unit as like 'void' in java
@@ -48,22 +48,23 @@ class DemoClass{
 
 /** Default arguments
  * when arguments are not passed then fun will take default value if we are already provided default value to fun */
- fun printmsg(count : Int=2){ // parameters -- > param are val type we can not able to re-assign
+ fun funDefaultArgument(count : Int=2){ // parameters -- > param are val type we can not able to re-assign
      for (i in 1..count){
          println("Hello,Default argument $i")
      }
  }
 
-
- fun power(a : Double,b : Int) : Double {
-     return  a.pow(b)
- }
+fun power(a:Double,b:Int) : Double{
+    return a.pow(b)
+}
 
  fun main(){
 
         
      topLevel()
-     DemoClass().memberfun()
+     var demo = DemoClass()
+     demo.memberfun()
+
      functionA()
 
      //Return Data type as we mention in fun declaration
@@ -77,19 +78,20 @@ class DemoClass{
      evenOdd(5)
 
      println("Argument passed as 3")
-     printmsg(3) // arguments
+     funDefaultArgument(3) // arguments
      println("Argument not passed it taken from default")
-     printmsg()
+     funDefaultArgument()
 
      // Named arguments --> if fun have more param then sometime quite difficult which param assign which argument
-     println(sum(c=1,a=9,b=80))
+     println(sum(b=10,c=5,a=10))
 
      // store function as variable --> assign fun to variables '::'
     // again we can assign another fun to variable but both the fun has same signature
-     var fn: (a: Double, b: Int) -> Double = :: power
-     println(fn(2.3,10))
+    var fn : (Double,Int)-> Double = :: power
+     println(fn(25.2,4))
      fn = :: sum
-     println(fn(2.3,10))
+     println(fn(5.0,7))
+
 
 
  }

@@ -1,4 +1,3 @@
-
 /** Protocol or abstract is placeholder:
  * 1.abstract is by default open
  * 2.abstract class have both abstract and non-abstract methode/properties

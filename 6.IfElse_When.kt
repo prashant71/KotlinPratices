@@ -23,12 +23,12 @@
                                 } else{
                                     "Both are equal"
                                 }
-    //Inline
-    var higherNumber1 =if (b<a) "a is Greater" else if(a<b) "b is Greater" else if(a==b) "both are equal" else "Input is not valid"
-    println(higherNumber1)
 
-    val number = (a<b)
-    println("$higherNumber $number" )
+     println(higherNumber)
+
+    //Inline
+    var higherNumber1 =if (b<a) "a is Greater" else if(a<b) "b is Greater"  else if(a==b) "both are equal" else "Input is not valid"
+    println(higherNumber1)
 
     //when can be empty also,add condition inside when and return
     val great_no = when{
@@ -36,7 +36,7 @@
         b>a -> "B is greater"
         else -> "Both are equal"
     }
-    println(great_no)
+    println("When ->$great_no")
 
     //instead of using multiple If-else (cascading) we can use When it is more readable
     val animal = "Dog"
@@ -49,13 +49,14 @@
 
     //'when' can be use as an Expression
     //'is' used to check and automatic cast
-    var test : Any = 23
-    val result = when(test) {
+    var test : Any = 20.5f
+    var result = when(test){
         10 -> "Ten"
-        is String -> "String"
-        in 15..20 -> "Present in the Range"
-        !is Int -> "Long Type :${test as Long}"
-        else -> "Not a number"
+        is String -> "yes,it is string"
+        in 15..20 -> "In range of 15 to 20"
+        !is Int -> "Not Int datatype"
+        else -> "except check"
     }
+
     println(result)
 }

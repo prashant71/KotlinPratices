@@ -1,16 +1,23 @@
+
+var topLevelVar : String = "Top Level Variable"
+
 fun main(){
      /** variables :
      * var  ---> value can be reassigned,
      * val  ---> value can't be reassigned */
+
+     var a  = 40 //Data Type Inferred
+     var b : Int = 110 //Immediate assignment
+
     val message :String
-    message="Like Constant"
+    message="Like Constant" //deferred assignment
     println(message)
+    println(topLevelVar)
 
 //  we can modify an object stored in val
     val language = mutableListOf<Any>("Java")
     language.add("Kotlin")
     language.add(50)
-
     println(language.toString())
 
     /** DataTypes */

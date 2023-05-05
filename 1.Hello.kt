@@ -8,5 +8,5 @@ fun main(args : Array<Int>){
     print("Main fun with Int")
 }
 fun main(args : Array<String>){
-    print("Hello Kotlin `AART ")
+    print("Hello Kotlin array")
 }

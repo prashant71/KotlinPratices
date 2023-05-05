@@ -1,7 +1,7 @@
 class Empty // if class don't have body
 
-class Car { // this class invoke default constructor
-    var carname : String = "Beetle" // properties
+class Car { // this class invoke default constructor ->if we not mention constructor it invok default
+    private var carname : String = "Beetle" // properties
     fun carDriving() { // methods
         println("$carname Car is driving -> default constructor invoked")
     }

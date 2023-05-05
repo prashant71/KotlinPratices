@@ -2,13 +2,21 @@ import java.util.*
 
 class Employee(nameParam : String, ageParam : Int){
     var name = nameParam
-    get() {
-        println("Getter is get called")
-        return "Mr.$field".uppercase(Locale.getDefault())
-    }
+        get() {
+            println("Getter fun called")
+            return "Mr.$field" //.uppercase(Locale.getDefault())
+        }
+        set(value) {
+           println("namr param set fun called")
+            field=value.uppercase()
+        }
+
     var age = ageParam
-    set(value) {
-        println("Setter is get called")
+       get(){
+           println("Age Param Get fun called")
+           return field+1}
+       set(value) {
+        println("Setter fun called")
         if(value>0){
             field=value
         }else println("Age can't be negative")

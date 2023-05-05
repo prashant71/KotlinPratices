@@ -6,7 +6,7 @@
  * 5.We can override Base class's non-abstract method in current class or this method can get added into current class directly
  * 6.implement 2 or more interface which has same name non-abstract method's then we can get supertype by mentioning super<classname> to resolve ambiguity*/
 
-interface Action{ //in interface all nonbodya fun is by default abstract
+interface Action{ //in interface all nonbody fun is by default abstract
     var right : Int
    fun drag()  //
    fun click(){  //normal fun public and open by default

@@ -6,6 +6,12 @@ fun main(){
      * Ranges ->0...n
      * */
 
+    var d=8..100
+    for(i in d step 5){
+        print("$i")
+        println()
+    }
+
     println("For Loop -> Ranges(Included End Number)")
     for (i in 1..5){
         println(" values for i $i")
@@ -21,7 +27,7 @@ fun main(){
     }
 
     println("Reverse the range")
-    for (i in 5 downTo 1){
+    for (i in 5 downTo -3 step 2){
         println(" values for i $i")
     }
 

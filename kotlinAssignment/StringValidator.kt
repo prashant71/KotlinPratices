@@ -1,6 +1,6 @@
 package kotlinAssignment
 
-fun isValidIdentifier(s: String): Boolean {
+fun isValidIdentifier(s: String) {
 
     val isValid = if(s.isEmpty()){
         false
@@ -8,15 +8,15 @@ fun isValidIdentifier(s: String): Boolean {
         false
     }else !s[0].isDigit()
 
-    return isValid
+    println(isValid)
 
 }
 
 fun main() {
-    println(isValidIdentifier("name"))   // true
-    println(isValidIdentifier("_name"))  // true
-    println(isValidIdentifier("_12"))    // true
-    println(isValidIdentifier(""))       // false
-    println(isValidIdentifier("012"))    // false
-    println(isValidIdentifier("no$"))    // false
+    isValidIdentifier("name")  // true
+    isValidIdentifier("_name")  // true
+    isValidIdentifier("_12")    // true
+    isValidIdentifier("")       // false
+    isValidIdentifier("012")    // false
+    isValidIdentifier("no$")    // false
 }

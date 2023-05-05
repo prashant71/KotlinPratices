@@ -12,7 +12,7 @@ interface Shape{
 }
 
 class Circle : Shape {
-    var radius : Int = 5
+    var radius : Int = 4
     override fun calculatearea() : Int {
         return (22*radius*radius)/7
     }
@@ -24,8 +24,8 @@ class Rectangle : Shape {
     override fun calculatearea() : Int {
        return length*height
     }
-
 }
+
 class Square : Shape {
     var side : Int = 0
     override fun calculatearea() : Int {
@@ -68,7 +68,7 @@ fun main(){
 
 
     /* Automatically cast the right-hand side of && to Circle */
-    if (shapeObject is Circle && shapeObject.radius > 5){
+    if (shapeObject is Circle && shapeObject.radius < 5){
         println("Circle with radius more than 5")
     }
     /* Automatically cast the right hand side of || to Sqaure */
@@ -78,8 +78,9 @@ fun main(){
 
     /* Explicit cast by using 'as'*/
  // run time class cast exception so use safe cast
-    var nullableShapeObject : Circle? = shapeObject as Circle
+    var nullableShapeObject : Circle? = shapeObject as? Circle
     nullableShapeObject?.radius
+    println("value -> $nullableShapeObject")
 
          try {
              var otherShapeObject : Circle = shapeObject as Circle

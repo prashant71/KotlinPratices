@@ -58,7 +58,7 @@ fun main(){
     day.currentDay()
 
     //enum object has 2 properties ordinal and name
-    println(DAYS.MONDAY.ordinal)
+    println(DAYS.WEDNSDAY.ordinal)
     println(DAYS.MONDAY.name)
 
     //DAYS.values()

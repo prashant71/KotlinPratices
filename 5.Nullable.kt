@@ -24,11 +24,12 @@ fun main() {
     /** Checking for null -> traditional way */
 
     if (nullableInt != null) {
-        print("Not Null")
+        println("Not Null")
         nullableInt.toFloat()
     } else {
         println("Null Value")
     }
+
     /** SAFE CALL '?.'
      * return value if variable is not null, and null otherwise.
      * Safe calls are useful in chains.

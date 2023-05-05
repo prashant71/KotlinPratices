@@ -13,9 +13,10 @@ fun main(){
     /** Break - break the loop and exit*/
     println("Do While Loop")
     do {
-        if (i==8) break
-        println("Loop count $i")
         i++
+        if (i==5) continue
+        println("Loop count $i")
+
     }while (i<10)
     /**
      * While Loop -> Check condition first
@@ -24,7 +25,7 @@ fun main(){
     println("While Loop")
     while (i<20){
         i++
-        if (i==15) continue
+        if (i==15) break
         println("Loop count $i")
     }
 
@@ -33,15 +34,22 @@ fun main(){
 
   loopI@for(i in 1..5){
         println("i is $i")
-    loopJ@for(j in 1..10){
+    loopJ@for(j in 1..3){
             println("j is $j")
-            for (k in 1..6) {
+            for (k in 1..4) {
                 println("k is $k")
-                if (k == 4) break@loopJ  // default it skip the k loop after break bt after labeling we can shift to I and J loop and skip that loop after break
+                if (k == 3) break@loopJ // default it skip the k loop after break bt after labeling we can shift to I and J loop and skip that loop after break
             }
         }
     }
     foo()
+    print("returned here")
+
+    var lis = listOf<String?>("One","Two","Three",null,"Four","Five")
+    lis.forEach {
+        if (it?.length?:0 > 0){
+          println(it)
+    } }
 }
 
 
@@ -50,5 +58,5 @@ fun foo() {
         if (it == 3) return@forEach // local return to the caller of the lambda - the forEach loop
         print(it)
     }
-    print(" done with explicit label")
+    println(" done with explicit label")
 }
